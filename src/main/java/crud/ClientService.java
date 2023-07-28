@@ -26,10 +26,10 @@ public class ClientService {
         TRANSACTION.commit();
     }
 
-    public void getClient(long id){
+    public Client getClient(long id){
         Client client = SESSION.get(Client.class,id);
-        System.out.println("getClient = " + client);
         SESSION.close();
+        return client;
     }
 
     public void getAll(){

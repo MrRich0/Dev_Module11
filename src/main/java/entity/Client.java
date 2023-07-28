@@ -6,6 +6,7 @@ import lombok.Data;
 @Entity
 @Data
 
+
 public class Client {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
@@ -13,4 +14,11 @@ public class Client {
     @Column
     private String name;
 
+    public Client(String name) {
+        this.name = name;
+    }
+
+    public Client() {
+
+    }
 }
